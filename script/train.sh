@@ -1,0 +1,15 @@
+python -m src.ke.train                                  \
+    -save_dir /data/czwang/ke/save                      \
+    -show_str ke_python_mrr_unif_transformer       \
+    -sent_reward unif                              \
+    -critic_pretrain_epochs 5                           \
+    -start_reinforce 20                                 \
+    -start_decay_at 15                                  \
+    -end_epoch 100                                      \
+    -batch_size 64                                      \
+    -max_predict_length 20                              \
+    -brnn                                               \
+    -model_name Transformer                             \
+    -has_attn 0                                         \
+    -gpus 0                                             \
+    -load_from /data/czwang/ke/save/model_xentke_python_mrr_code_bert_transformer/model_xentke_python_mrr_code_bert_transformer_19.pt
