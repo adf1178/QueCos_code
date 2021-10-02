@@ -1,0 +1,44 @@
+# config.yaml
+backend:
+    type: NSMLBackend
+    setting:
+        entry: train.py
+        dataset: [codesearch]
+        cpus: 2
+        gpus: 1
+        gpu-model: P40
+        args: "--automl"
+tune:
+    objective:
+        measure: acc
+        strategy: maximize
+    sampler:
+        name: PBTSampler
+        setting:
+            random_seed: 777
+            all_unique: False
+            max_attempt: 1000
+    planner:
+        name: PopulationPlanner
+        setting:
+            num_generations: 5
+            population: 10
+            alive_cnt: 2
+            comparator: 'avg_compare'
+            probs: 'halving'
+            max_worker: 30
+hyperparams:     
+   learning_rate:
+        type: log_range
+        min: 0.00005
+        max: 0.01
+   margin:
+        type: range
+        min: 0.1
+        max: 0.9
+   n_hidden:
+        type: values
+        values: [512, 1024]
+   lstm_dims:
+        type: values
+        values: [256, 512, 768, 1024]

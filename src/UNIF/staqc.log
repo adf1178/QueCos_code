@@ -1,0 +1,1157 @@
+Constructing Model..
+done
+{'dataset_name': 'CodeSearchDataset', 'train_tokens': 'train.unordered.tokens.h5', 'train_desc': 'train.desc.h5', 'valid_tokens': 'valid.unordered.tokens.h5', 'valid_desc': 'valid.desc.h5', 'use_codebase': 'use.rawcode.txt', 'use_tokens': 'use.tokens.h5', 'use_codevecs': 'use.codevecs.normalized.h5', 'train_name': 'train.name.h5', 'train_api': 'train.unordered.apiseq.h5', 'valid_name': 'valid.name.h5', 'valid_api': 'valid.apiseq.h5', 'use_names': 'use.name.h5', 'use_apis': 'use.apiseq.h5', 'name_len': 6, 'api_len': 30, 'tokens_len': 50, 'desc_len': 50, 'n_words': 10000, 'vocab_tokens': 'vocab.tokens.json', 'vocab_desc': 'vocab.desc.json', 'batch_size': 64, 'chunk_size': 200000, 'nb_epoch': 100, 'learning_rate': 0.001, 'adam_epsilon': 1e-08, 'warmup_steps': 5000, 'fp16': False, 'fp16_opt_level': 'O1', 'emb_size': 512, 'n_hidden': 1024, 'lstm_dims': 512, 'margin': 0.6, 'sim_measure': 'cos'}
+loading data ... ... ...
+68235 entries
+loading data ... ... ...
+8529 entries
+epo:[1/100] itr:[0/1066] step_time:0s Loss=0.59598
+epo:[1/100] itr:[100/1066] step_time:1s Loss=0.60071
+epo:[1/100] itr:[200/1066] step_time:1s Loss=0.60095
+epo:[1/100] itr:[300/1066] step_time:1s Loss=0.59993
+epo:[1/100] itr:[400/1066] step_time:1s Loss=0.59986
+epo:[1/100] itr:[500/1066] step_time:1s Loss=0.59877
+epo:[1/100] itr:[600/1066] step_time:1s Loss=0.59705
+epo:[1/100] itr:[700/1066] step_time:1s Loss=0.59825
+epo:[1/100] itr:[800/1066] step_time:1s Loss=0.59391
+epo:[1/100] itr:[900/1066] step_time:1s Loss=0.58538
+epo:[1/100] itr:[1000/1066] step_time:1s Loss=0.57551
+epo:[2/100] itr:[34/1066] step_time:0s Loss=0.54538
+epo:[2/100] itr:[134/1066] step_time:1s Loss=0.54402
+epo:[2/100] itr:[234/1066] step_time:1s Loss=0.53179
+epo:[2/100] itr:[334/1066] step_time:1s Loss=0.52345
+epo:[2/100] itr:[434/1066] step_time:1s Loss=0.51209
+epo:[2/100] itr:[534/1066] step_time:1s Loss=0.50214
+epo:[2/100] itr:[634/1066] step_time:1s Loss=0.48790
+epo:[2/100] itr:[734/1066] step_time:1s Loss=0.48000
+epo:[2/100] itr:[834/1066] step_time:1s Loss=0.46556
+epo:[2/100] itr:[934/1066] step_time:1s Loss=0.46268
+epo:[2/100] itr:[1034/1066] step_time:1s Loss=0.45025
+epo:[3/100] itr:[68/1066] step_time:0s Loss=0.42776
+epo:[3/100] itr:[168/1066] step_time:1s Loss=0.41464
+epo:[3/100] itr:[268/1066] step_time:1s Loss=0.40481
+epo:[3/100] itr:[368/1066] step_time:1s Loss=0.40327
+epo:[3/100] itr:[468/1066] step_time:1s Loss=0.39231
+epo:[3/100] itr:[568/1066] step_time:1s Loss=0.38317
+epo:[3/100] itr:[668/1066] step_time:1s Loss=0.38323
+epo:[3/100] itr:[768/1066] step_time:1s Loss=0.37575
+epo:[3/100] itr:[868/1066] step_time:1s Loss=0.36494
+epo:[3/100] itr:[968/1066] step_time:1s Loss=0.36211
+epo:[4/100] itr:[2/1066] step_time:0s Loss=0.32168
+epo:[4/100] itr:[102/1066] step_time:1s Loss=0.33223
+epo:[4/100] itr:[202/1066] step_time:1s Loss=0.33158
+epo:[4/100] itr:[302/1066] step_time:1s Loss=0.32785
+epo:[4/100] itr:[402/1066] step_time:1s Loss=0.33516
+epo:[4/100] itr:[502/1066] step_time:1s Loss=0.32023
+epo:[4/100] itr:[602/1066] step_time:1s Loss=0.32653
+epo:[4/100] itr:[702/1066] step_time:1s Loss=0.32069
+epo:[4/100] itr:[802/1066] step_time:1s Loss=0.31959
+epo:[4/100] itr:[902/1066] step_time:1s Loss=0.31916
+epo:[4/100] itr:[1002/1066] step_time:1s Loss=0.32581
+epo:[5/100] itr:[36/1066] step_time:0s Loss=0.28927
+epo:[5/100] itr:[136/1066] step_time:1s Loss=0.28601
+epo:[5/100] itr:[236/1066] step_time:1s Loss=0.28996
+epo:[5/100] itr:[336/1066] step_time:1s Loss=0.29234
+epo:[5/100] itr:[436/1066] step_time:1s Loss=0.29210
+epo:[5/100] itr:[536/1066] step_time:1s Loss=0.28897
+epo:[5/100] itr:[636/1066] step_time:1s Loss=0.29553
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.09it/s] 50%|█████     | 4/8 [00:00<00:00,  9.05it/s] 88%|████████▊ | 7/8 [00:00<00:00, 11.22it/s]100%|██████████| 8/8 [00:00<00:00, 17.49it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 27.13it/s] 75%|███████▌  | 6/8 [00:00<00:00, 27.24it/s]100%|██████████| 8/8 [00:00<00:00, 27.42it/s]
+ACC=0.030125, MRR=0.030125, MAP=0.030125, nDCG=0.030125
+epo:[5/100] itr:[736/1066] step_time:1s Loss=0.29456
+epo:[5/100] itr:[836/1066] step_time:1s Loss=0.29085
+epo:[5/100] itr:[936/1066] step_time:1s Loss=0.28951
+epo:[5/100] itr:[1036/1066] step_time:1s Loss=0.29142
+epo:[6/100] itr:[70/1066] step_time:0s Loss=0.26076
+epo:[6/100] itr:[170/1066] step_time:1s Loss=0.26361
+epo:[6/100] itr:[270/1066] step_time:1s Loss=0.26712
+epo:[6/100] itr:[370/1066] step_time:1s Loss=0.26755
+epo:[6/100] itr:[470/1066] step_time:1s Loss=0.26194
+epo:[6/100] itr:[570/1066] step_time:1s Loss=0.26803
+epo:[6/100] itr:[670/1066] step_time:1s Loss=0.26939
+epo:[6/100] itr:[770/1066] step_time:1s Loss=0.27406
+epo:[6/100] itr:[870/1066] step_time:1s Loss=0.27129
+epo:[6/100] itr:[970/1066] step_time:1s Loss=0.27077
+epo:[7/100] itr:[4/1066] step_time:0s Loss=0.24116
+epo:[7/100] itr:[104/1066] step_time:1s Loss=0.25237
+epo:[7/100] itr:[204/1066] step_time:1s Loss=0.25055
+epo:[7/100] itr:[304/1066] step_time:1s Loss=0.24531
+epo:[7/100] itr:[404/1066] step_time:1s Loss=0.25438
+epo:[7/100] itr:[504/1066] step_time:1s Loss=0.24681
+epo:[7/100] itr:[604/1066] step_time:1s Loss=0.25189
+epo:[7/100] itr:[704/1066] step_time:1s Loss=0.25819
+epo:[7/100] itr:[804/1066] step_time:1s Loss=0.25468
+epo:[7/100] itr:[904/1066] step_time:1s Loss=0.25988
+epo:[7/100] itr:[1004/1066] step_time:1s Loss=0.26237
+epo:[8/100] itr:[38/1066] step_time:0s Loss=0.23211
+epo:[8/100] itr:[138/1066] step_time:1s Loss=0.23527
+epo:[8/100] itr:[238/1066] step_time:1s Loss=0.23905
+epo:[8/100] itr:[338/1066] step_time:1s Loss=0.23864
+epo:[8/100] itr:[438/1066] step_time:1s Loss=0.23843
+epo:[8/100] itr:[538/1066] step_time:1s Loss=0.24363
+epo:[8/100] itr:[638/1066] step_time:1s Loss=0.23940
+epo:[8/100] itr:[738/1066] step_time:1s Loss=0.24199
+epo:[8/100] itr:[838/1066] step_time:1s Loss=0.24103
+epo:[8/100] itr:[938/1066] step_time:1s Loss=0.24768
+epo:[8/100] itr:[1038/1066] step_time:1s Loss=0.24798
+epo:[9/100] itr:[72/1066] step_time:0s Loss=0.22123
+epo:[9/100] itr:[172/1066] step_time:1s Loss=0.22987
+epo:[9/100] itr:[272/1066] step_time:1s Loss=0.22928
+epo:[9/100] itr:[372/1066] step_time:1s Loss=0.23176
+epo:[9/100] itr:[472/1066] step_time:1s Loss=0.23776
+epo:[9/100] itr:[572/1066] step_time:1s Loss=0.23098
+epo:[9/100] itr:[672/1066] step_time:1s Loss=0.23915
+epo:[9/100] itr:[772/1066] step_time:1s Loss=0.23932
+epo:[9/100] itr:[872/1066] step_time:1s Loss=0.23395
+epo:[9/100] itr:[972/1066] step_time:1s Loss=0.23937
+epo:[10/100] itr:[6/1066] step_time:0s Loss=0.24640
+epo:[10/100] itr:[106/1066] step_time:1s Loss=0.22115
+epo:[10/100] itr:[206/1066] step_time:1s Loss=0.21957
+epo:[10/100] itr:[306/1066] step_time:1s Loss=0.22535
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.50it/s] 50%|█████     | 4/8 [00:00<00:00,  8.41it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.44it/s]100%|██████████| 8/8 [00:00<00:00, 17.66it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 50%|█████     | 4/8 [00:00<00:00, 32.40it/s]100%|██████████| 8/8 [00:00<00:00, 32.26it/s]
+ACC=0.038, MRR=0.038, MAP=0.038, nDCG=0.038
+epo:[10/100] itr:[406/1066] step_time:2s Loss=0.22807
+epo:[10/100] itr:[506/1066] step_time:1s Loss=0.22908
+epo:[10/100] itr:[606/1066] step_time:1s Loss=0.22933
+epo:[10/100] itr:[706/1066] step_time:1s Loss=0.22792
+epo:[10/100] itr:[806/1066] step_time:1s Loss=0.22561
+epo:[10/100] itr:[906/1066] step_time:1s Loss=0.23621
+epo:[10/100] itr:[1006/1066] step_time:1s Loss=0.23027
+epo:[11/100] itr:[40/1066] step_time:0s Loss=0.21319
+epo:[11/100] itr:[140/1066] step_time:1s Loss=0.21496
+epo:[11/100] itr:[240/1066] step_time:1s Loss=0.21576
+epo:[11/100] itr:[340/1066] step_time:1s Loss=0.21821
+epo:[11/100] itr:[440/1066] step_time:1s Loss=0.22564
+epo:[11/100] itr:[540/1066] step_time:1s Loss=0.22027
+epo:[11/100] itr:[640/1066] step_time:1s Loss=0.22700
+epo:[11/100] itr:[740/1066] step_time:1s Loss=0.22802
+epo:[11/100] itr:[840/1066] step_time:1s Loss=0.22415
+epo:[11/100] itr:[940/1066] step_time:1s Loss=0.22618
+epo:[11/100] itr:[1040/1066] step_time:1s Loss=0.22722
+epo:[12/100] itr:[74/1066] step_time:0s Loss=0.20908
+epo:[12/100] itr:[174/1066] step_time:1s Loss=0.21316
+epo:[12/100] itr:[274/1066] step_time:1s Loss=0.21734
+epo:[12/100] itr:[374/1066] step_time:1s Loss=0.21754
+epo:[12/100] itr:[474/1066] step_time:1s Loss=0.22017
+epo:[12/100] itr:[574/1066] step_time:1s Loss=0.21159
+epo:[12/100] itr:[674/1066] step_time:1s Loss=0.22057
+epo:[12/100] itr:[774/1066] step_time:1s Loss=0.22341
+epo:[12/100] itr:[874/1066] step_time:1s Loss=0.21931
+epo:[12/100] itr:[974/1066] step_time:1s Loss=0.22136
+epo:[13/100] itr:[8/1066] step_time:0s Loss=0.22092
+epo:[13/100] itr:[108/1066] step_time:1s Loss=0.20516
+epo:[13/100] itr:[208/1066] step_time:1s Loss=0.21233
+epo:[13/100] itr:[308/1066] step_time:1s Loss=0.21113
+epo:[13/100] itr:[408/1066] step_time:1s Loss=0.20926
+epo:[13/100] itr:[508/1066] step_time:1s Loss=0.21582
+epo:[13/100] itr:[608/1066] step_time:1s Loss=0.21837
+epo:[13/100] itr:[708/1066] step_time:1s Loss=0.21242
+epo:[13/100] itr:[808/1066] step_time:1s Loss=0.22127
+epo:[13/100] itr:[908/1066] step_time:1s Loss=0.22000
+epo:[13/100] itr:[1008/1066] step_time:1s Loss=0.22128
+epo:[14/100] itr:[42/1066] step_time:0s Loss=0.19561
+epo:[14/100] itr:[142/1066] step_time:1s Loss=0.21024
+epo:[14/100] itr:[242/1066] step_time:1s Loss=0.20993
+epo:[14/100] itr:[342/1066] step_time:1s Loss=0.20916
+epo:[14/100] itr:[442/1066] step_time:1s Loss=0.20543
+epo:[14/100] itr:[542/1066] step_time:1s Loss=0.21218
+epo:[14/100] itr:[642/1066] step_time:1s Loss=0.20822
+epo:[14/100] itr:[742/1066] step_time:1s Loss=0.21271
+epo:[14/100] itr:[842/1066] step_time:1s Loss=0.21394
+epo:[14/100] itr:[942/1066] step_time:1s Loss=0.21826
+epo:[14/100] itr:[1042/1066] step_time:1s Loss=0.21386
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.68it/s] 50%|█████     | 4/8 [00:00<00:00,  8.61it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.71it/s]100%|██████████| 8/8 [00:00<00:00, 17.33it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 21.03it/s] 75%|███████▌  | 6/8 [00:00<00:00, 21.08it/s]100%|██████████| 8/8 [00:00<00:00, 21.12it/s]
+ACC=0.036625, MRR=0.036625, MAP=0.036625, nDCG=0.036625
+epo:[15/100] itr:[76/1066] step_time:1s Loss=0.19852
+epo:[15/100] itr:[176/1066] step_time:0s Loss=0.20379
+epo:[15/100] itr:[276/1066] step_time:1s Loss=0.20487
+epo:[15/100] itr:[376/1066] step_time:1s Loss=0.20932
+epo:[15/100] itr:[476/1066] step_time:1s Loss=0.20874
+epo:[15/100] itr:[576/1066] step_time:1s Loss=0.20778
+epo:[15/100] itr:[676/1066] step_time:1s Loss=0.20836
+epo:[15/100] itr:[776/1066] step_time:1s Loss=0.21199
+epo:[15/100] itr:[876/1066] step_time:1s Loss=0.21474
+epo:[15/100] itr:[976/1066] step_time:1s Loss=0.21210
+epo:[16/100] itr:[10/1066] step_time:0s Loss=0.19477
+epo:[16/100] itr:[110/1066] step_time:1s Loss=0.19397
+epo:[16/100] itr:[210/1066] step_time:1s Loss=0.20538
+epo:[16/100] itr:[310/1066] step_time:1s Loss=0.20072
+epo:[16/100] itr:[410/1066] step_time:1s Loss=0.20186
+epo:[16/100] itr:[510/1066] step_time:1s Loss=0.20286
+epo:[16/100] itr:[610/1066] step_time:1s Loss=0.20911
+epo:[16/100] itr:[710/1066] step_time:1s Loss=0.20623
+epo:[16/100] itr:[810/1066] step_time:1s Loss=0.20377
+epo:[16/100] itr:[910/1066] step_time:1s Loss=0.21554
+epo:[16/100] itr:[1010/1066] step_time:1s Loss=0.21298
+epo:[17/100] itr:[44/1066] step_time:0s Loss=0.19928
+epo:[17/100] itr:[144/1066] step_time:1s Loss=0.20082
+epo:[17/100] itr:[244/1066] step_time:1s Loss=0.20373
+epo:[17/100] itr:[344/1066] step_time:1s Loss=0.20929
+epo:[17/100] itr:[444/1066] step_time:1s Loss=0.20342
+epo:[17/100] itr:[544/1066] step_time:0s Loss=0.20422
+epo:[17/100] itr:[644/1066] step_time:0s Loss=0.20924
+epo:[17/100] itr:[744/1066] step_time:0s Loss=0.20669
+epo:[17/100] itr:[844/1066] step_time:0s Loss=0.20803
+epo:[17/100] itr:[944/1066] step_time:1s Loss=0.20776
+epo:[17/100] itr:[1044/1066] step_time:1s Loss=0.20840
+epo:[18/100] itr:[78/1066] step_time:0s Loss=0.19793
+epo:[18/100] itr:[178/1066] step_time:0s Loss=0.19759
+epo:[18/100] itr:[278/1066] step_time:0s Loss=0.19904
+epo:[18/100] itr:[378/1066] step_time:1s Loss=0.20115
+epo:[18/100] itr:[478/1066] step_time:1s Loss=0.20220
+epo:[18/100] itr:[578/1066] step_time:1s Loss=0.20545
+epo:[18/100] itr:[678/1066] step_time:1s Loss=0.20401
+epo:[18/100] itr:[778/1066] step_time:1s Loss=0.20402
+epo:[18/100] itr:[878/1066] step_time:1s Loss=0.19914
+epo:[18/100] itr:[978/1066] step_time:1s Loss=0.20669
+epo:[19/100] itr:[12/1066] step_time:0s Loss=0.18784
+epo:[19/100] itr:[112/1066] step_time:1s Loss=0.19082
+epo:[19/100] itr:[212/1066] step_time:1s Loss=0.19728
+epo:[19/100] itr:[312/1066] step_time:1s Loss=0.19574
+epo:[19/100] itr:[412/1066] step_time:1s Loss=0.19757
+epo:[19/100] itr:[512/1066] step_time:1s Loss=0.20012
+epo:[19/100] itr:[612/1066] step_time:1s Loss=0.19955
+epo:[19/100] itr:[712/1066] step_time:1s Loss=0.19789
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.71it/s] 50%|█████     | 4/8 [00:00<00:00,  8.64it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.70it/s]100%|██████████| 8/8 [00:00<00:00, 16.99it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 50%|█████     | 4/8 [00:00<00:00, 32.66it/s]100%|██████████| 8/8 [00:00<00:00, 32.89it/s]
+ACC=0.04075, MRR=0.04075, MAP=0.04075, nDCG=0.04075
+epo:[19/100] itr:[812/1066] step_time:2s Loss=0.20593
+epo:[19/100] itr:[912/1066] step_time:1s Loss=0.20311
+epo:[19/100] itr:[1012/1066] step_time:1s Loss=0.20610
+epo:[20/100] itr:[46/1066] step_time:0s Loss=0.19321
+epo:[20/100] itr:[146/1066] step_time:0s Loss=0.19575
+epo:[20/100] itr:[246/1066] step_time:0s Loss=0.19173
+epo:[20/100] itr:[346/1066] step_time:0s Loss=0.19618
+epo:[20/100] itr:[446/1066] step_time:0s Loss=0.19844
+epo:[20/100] itr:[546/1066] step_time:1s Loss=0.19880
+epo:[20/100] itr:[646/1066] step_time:1s Loss=0.19782
+epo:[20/100] itr:[746/1066] step_time:0s Loss=0.20040
+epo:[20/100] itr:[846/1066] step_time:0s Loss=0.20186
+epo:[20/100] itr:[946/1066] step_time:0s Loss=0.20135
+epo:[20/100] itr:[1046/1066] step_time:0s Loss=0.20248
+epo:[21/100] itr:[80/1066] step_time:0s Loss=0.18587
+epo:[21/100] itr:[180/1066] step_time:1s Loss=0.19124
+epo:[21/100] itr:[280/1066] step_time:1s Loss=0.18929
+epo:[21/100] itr:[380/1066] step_time:1s Loss=0.19519
+epo:[21/100] itr:[480/1066] step_time:1s Loss=0.19879
+epo:[21/100] itr:[580/1066] step_time:1s Loss=0.19621
+epo:[21/100] itr:[680/1066] step_time:1s Loss=0.19647
+epo:[21/100] itr:[780/1066] step_time:1s Loss=0.20257
+epo:[21/100] itr:[880/1066] step_time:1s Loss=0.19119
+epo:[21/100] itr:[980/1066] step_time:1s Loss=0.20396
+epo:[22/100] itr:[14/1066] step_time:0s Loss=0.18957
+epo:[22/100] itr:[114/1066] step_time:1s Loss=0.18417
+epo:[22/100] itr:[214/1066] step_time:1s Loss=0.19260
+epo:[22/100] itr:[314/1066] step_time:1s Loss=0.19382
+epo:[22/100] itr:[414/1066] step_time:1s Loss=0.19381
+epo:[22/100] itr:[514/1066] step_time:1s Loss=0.19185
+epo:[22/100] itr:[614/1066] step_time:1s Loss=0.20236
+epo:[22/100] itr:[714/1066] step_time:1s Loss=0.19211
+epo:[22/100] itr:[814/1066] step_time:1s Loss=0.19462
+epo:[22/100] itr:[914/1066] step_time:1s Loss=0.19917
+epo:[22/100] itr:[1014/1066] step_time:1s Loss=0.20450
+epo:[23/100] itr:[48/1066] step_time:0s Loss=0.19481
+epo:[23/100] itr:[148/1066] step_time:1s Loss=0.18612
+epo:[23/100] itr:[248/1066] step_time:1s Loss=0.19218
+epo:[23/100] itr:[348/1066] step_time:1s Loss=0.18884
+epo:[23/100] itr:[448/1066] step_time:1s Loss=0.19514
+epo:[23/100] itr:[548/1066] step_time:1s Loss=0.19611
+epo:[23/100] itr:[648/1066] step_time:1s Loss=0.19093
+epo:[23/100] itr:[748/1066] step_time:1s Loss=0.19474
+epo:[23/100] itr:[848/1066] step_time:1s Loss=0.19947
+epo:[23/100] itr:[948/1066] step_time:1s Loss=0.19459
+epo:[23/100] itr:[1048/1066] step_time:1s Loss=0.20208
+epo:[24/100] itr:[82/1066] step_time:0s Loss=0.18248
+epo:[24/100] itr:[182/1066] step_time:1s Loss=0.18660
+epo:[24/100] itr:[282/1066] step_time:1s Loss=0.18801
+epo:[24/100] itr:[382/1066] step_time:1s Loss=0.19515
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.79it/s] 50%|█████     | 4/8 [00:00<00:00,  8.71it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.81it/s]100%|██████████| 8/8 [00:00<00:00, 17.27it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 26.63it/s] 75%|███████▌  | 6/8 [00:00<00:00, 27.02it/s]100%|██████████| 8/8 [00:00<00:00, 27.36it/s]
+ACC=0.03925, MRR=0.03925, MAP=0.03925, nDCG=0.03925
+epo:[24/100] itr:[482/1066] step_time:1s Loss=0.18930
+epo:[24/100] itr:[582/1066] step_time:0s Loss=0.19487
+epo:[24/100] itr:[682/1066] step_time:1s Loss=0.19475
+epo:[24/100] itr:[782/1066] step_time:1s Loss=0.19384
+epo:[24/100] itr:[882/1066] step_time:1s Loss=0.20011
+epo:[24/100] itr:[982/1066] step_time:1s Loss=0.19843
+epo:[25/100] itr:[16/1066] step_time:0s Loss=0.17932
+epo:[25/100] itr:[116/1066] step_time:0s Loss=0.17833
+epo:[25/100] itr:[216/1066] step_time:1s Loss=0.19368
+epo:[25/100] itr:[316/1066] step_time:1s Loss=0.18649
+epo:[25/100] itr:[416/1066] step_time:1s Loss=0.18594
+epo:[25/100] itr:[516/1066] step_time:0s Loss=0.19154
+epo:[25/100] itr:[616/1066] step_time:1s Loss=0.19011
+epo:[25/100] itr:[716/1066] step_time:1s Loss=0.19360
+epo:[25/100] itr:[816/1066] step_time:1s Loss=0.19257
+epo:[25/100] itr:[916/1066] step_time:1s Loss=0.19029
+epo:[25/100] itr:[1016/1066] step_time:1s Loss=0.19849
+epo:[26/100] itr:[50/1066] step_time:0s Loss=0.18315
+epo:[26/100] itr:[150/1066] step_time:1s Loss=0.18578
+epo:[26/100] itr:[250/1066] step_time:1s Loss=0.18786
+epo:[26/100] itr:[350/1066] step_time:1s Loss=0.18464
+epo:[26/100] itr:[450/1066] step_time:1s Loss=0.18900
+epo:[26/100] itr:[550/1066] step_time:1s Loss=0.19800
+epo:[26/100] itr:[650/1066] step_time:1s Loss=0.19035
+epo:[26/100] itr:[750/1066] step_time:0s Loss=0.19185
+epo:[26/100] itr:[850/1066] step_time:1s Loss=0.19337
+epo:[26/100] itr:[950/1066] step_time:1s Loss=0.19376
+epo:[26/100] itr:[1050/1066] step_time:1s Loss=0.18981
+epo:[27/100] itr:[84/1066] step_time:0s Loss=0.18833
+epo:[27/100] itr:[184/1066] step_time:1s Loss=0.17972
+epo:[27/100] itr:[284/1066] step_time:1s Loss=0.18386
+epo:[27/100] itr:[384/1066] step_time:1s Loss=0.18970
+epo:[27/100] itr:[484/1066] step_time:1s Loss=0.18369
+epo:[27/100] itr:[584/1066] step_time:1s Loss=0.19015
+epo:[27/100] itr:[684/1066] step_time:1s Loss=0.18860
+epo:[27/100] itr:[784/1066] step_time:1s Loss=0.19435
+epo:[27/100] itr:[884/1066] step_time:1s Loss=0.19389
+epo:[27/100] itr:[984/1066] step_time:1s Loss=0.19178
+epo:[28/100] itr:[18/1066] step_time:0s Loss=0.17582
+epo:[28/100] itr:[118/1066] step_time:1s Loss=0.17976
+epo:[28/100] itr:[218/1066] step_time:1s Loss=0.18730
+epo:[28/100] itr:[318/1066] step_time:1s Loss=0.18230
+epo:[28/100] itr:[418/1066] step_time:1s Loss=0.18904
+epo:[28/100] itr:[518/1066] step_time:1s Loss=0.19246
+epo:[28/100] itr:[618/1066] step_time:1s Loss=0.18870
+epo:[28/100] itr:[718/1066] step_time:1s Loss=0.18615
+epo:[28/100] itr:[818/1066] step_time:1s Loss=0.18686
+epo:[28/100] itr:[918/1066] step_time:1s Loss=0.19411
+epo:[28/100] itr:[1018/1066] step_time:1s Loss=0.19433
+epo:[29/100] itr:[52/1066] step_time:0s Loss=0.18730
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.55it/s] 50%|█████     | 4/8 [00:00<00:00,  8.49it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.55it/s]100%|██████████| 8/8 [00:00<00:00, 17.03it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 26.39it/s] 75%|███████▌  | 6/8 [00:00<00:00, 26.78it/s]100%|██████████| 8/8 [00:00<00:00, 28.24it/s]
+ACC=0.042375, MRR=0.042375, MAP=0.042375, nDCG=0.042375
+epo:[29/100] itr:[152/1066] step_time:2s Loss=0.17819
+epo:[29/100] itr:[252/1066] step_time:1s Loss=0.18757
+epo:[29/100] itr:[352/1066] step_time:1s Loss=0.18504
+epo:[29/100] itr:[452/1066] step_time:1s Loss=0.18689
+epo:[29/100] itr:[552/1066] step_time:1s Loss=0.18985
+epo:[29/100] itr:[652/1066] step_time:1s Loss=0.18595
+epo:[29/100] itr:[752/1066] step_time:1s Loss=0.18335
+epo:[29/100] itr:[852/1066] step_time:1s Loss=0.19188
+epo:[29/100] itr:[952/1066] step_time:1s Loss=0.19227
+epo:[29/100] itr:[1052/1066] step_time:1s Loss=0.18887
+epo:[30/100] itr:[86/1066] step_time:0s Loss=0.18037
+epo:[30/100] itr:[186/1066] step_time:1s Loss=0.17539
+epo:[30/100] itr:[286/1066] step_time:1s Loss=0.18002
+epo:[30/100] itr:[386/1066] step_time:1s Loss=0.18853
+epo:[30/100] itr:[486/1066] step_time:1s Loss=0.18436
+epo:[30/100] itr:[586/1066] step_time:1s Loss=0.17894
+epo:[30/100] itr:[686/1066] step_time:1s Loss=0.18564
+epo:[30/100] itr:[786/1066] step_time:1s Loss=0.18688
+epo:[30/100] itr:[886/1066] step_time:1s Loss=0.19050
+epo:[30/100] itr:[986/1066] step_time:1s Loss=0.19290
+epo:[31/100] itr:[20/1066] step_time:0s Loss=0.18129
+epo:[31/100] itr:[120/1066] step_time:0s Loss=0.17352
+epo:[31/100] itr:[220/1066] step_time:1s Loss=0.17951
+epo:[31/100] itr:[320/1066] step_time:1s Loss=0.18061
+epo:[31/100] itr:[420/1066] step_time:1s Loss=0.18433
+epo:[31/100] itr:[520/1066] step_time:1s Loss=0.18095
+epo:[31/100] itr:[620/1066] step_time:1s Loss=0.18845
+epo:[31/100] itr:[720/1066] step_time:1s Loss=0.18594
+epo:[31/100] itr:[820/1066] step_time:1s Loss=0.18506
+epo:[31/100] itr:[920/1066] step_time:1s Loss=0.19076
+epo:[31/100] itr:[1020/1066] step_time:1s Loss=0.18661
+epo:[32/100] itr:[54/1066] step_time:0s Loss=0.17208
+epo:[32/100] itr:[154/1066] step_time:1s Loss=0.17818
+epo:[32/100] itr:[254/1066] step_time:1s Loss=0.18220
+epo:[32/100] itr:[354/1066] step_time:1s Loss=0.18323
+epo:[32/100] itr:[454/1066] step_time:1s Loss=0.18980
+epo:[32/100] itr:[554/1066] step_time:1s Loss=0.18035
+epo:[32/100] itr:[654/1066] step_time:1s Loss=0.18144
+epo:[32/100] itr:[754/1066] step_time:1s Loss=0.18771
+epo:[32/100] itr:[854/1066] step_time:1s Loss=0.19388
+epo:[32/100] itr:[954/1066] step_time:1s Loss=0.18398
+epo:[32/100] itr:[1054/1066] step_time:1s Loss=0.18690
+epo:[33/100] itr:[88/1066] step_time:1s Loss=0.17342
+epo:[33/100] itr:[188/1066] step_time:1s Loss=0.17776
+epo:[33/100] itr:[288/1066] step_time:1s Loss=0.17755
+epo:[33/100] itr:[388/1066] step_time:1s Loss=0.18461
+epo:[33/100] itr:[488/1066] step_time:1s Loss=0.18266
+epo:[33/100] itr:[588/1066] step_time:1s Loss=0.18282
+epo:[33/100] itr:[688/1066] step_time:1s Loss=0.18718
+epo:[33/100] itr:[788/1066] step_time:1s Loss=0.18259
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.81it/s] 50%|█████     | 4/8 [00:00<00:00,  8.77it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.82it/s]100%|██████████| 8/8 [00:00<00:00, 17.04it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 25%|██▌       | 2/8 [00:00<00:00, 18.98it/s] 62%|██████▎   | 5/8 [00:00<00:00, 19.62it/s]100%|██████████| 8/8 [00:00<00:00, 20.24it/s]
+ACC=0.04175, MRR=0.04175, MAP=0.04175, nDCG=0.04175
+epo:[33/100] itr:[888/1066] step_time:2s Loss=0.18648
+epo:[33/100] itr:[988/1066] step_time:1s Loss=0.18880
+epo:[34/100] itr:[22/1066] step_time:0s Loss=0.17644
+epo:[34/100] itr:[122/1066] step_time:1s Loss=0.17988
+epo:[34/100] itr:[222/1066] step_time:1s Loss=0.17541
+epo:[34/100] itr:[322/1066] step_time:1s Loss=0.17242
+epo:[34/100] itr:[422/1066] step_time:1s Loss=0.18143
+epo:[34/100] itr:[522/1066] step_time:1s Loss=0.18470
+epo:[34/100] itr:[622/1066] step_time:1s Loss=0.18451
+epo:[34/100] itr:[722/1066] step_time:1s Loss=0.18554
+epo:[34/100] itr:[822/1066] step_time:1s Loss=0.18426
+epo:[34/100] itr:[922/1066] step_time:1s Loss=0.18751
+epo:[34/100] itr:[1022/1066] step_time:1s Loss=0.18722
+epo:[35/100] itr:[56/1066] step_time:0s Loss=0.17430
+epo:[35/100] itr:[156/1066] step_time:1s Loss=0.17384
+epo:[35/100] itr:[256/1066] step_time:1s Loss=0.17969
+epo:[35/100] itr:[356/1066] step_time:1s Loss=0.17642
+epo:[35/100] itr:[456/1066] step_time:1s Loss=0.18132
+epo:[35/100] itr:[556/1066] step_time:1s Loss=0.18170
+epo:[35/100] itr:[656/1066] step_time:1s Loss=0.18048
+epo:[35/100] itr:[756/1066] step_time:1s Loss=0.18652
+epo:[35/100] itr:[856/1066] step_time:1s Loss=0.18032
+epo:[35/100] itr:[956/1066] step_time:1s Loss=0.18059
+epo:[35/100] itr:[1056/1066] step_time:1s Loss=0.18108
+epo:[36/100] itr:[90/1066] step_time:0s Loss=0.17693
+epo:[36/100] itr:[190/1066] step_time:1s Loss=0.17733
+epo:[36/100] itr:[290/1066] step_time:1s Loss=0.18085
+epo:[36/100] itr:[390/1066] step_time:1s Loss=0.17698
+epo:[36/100] itr:[490/1066] step_time:1s Loss=0.18048
+epo:[36/100] itr:[590/1066] step_time:1s Loss=0.17839
+epo:[36/100] itr:[690/1066] step_time:1s Loss=0.18073
+epo:[36/100] itr:[790/1066] step_time:1s Loss=0.18262
+epo:[36/100] itr:[890/1066] step_time:1s Loss=0.17683
+epo:[36/100] itr:[990/1066] step_time:1s Loss=0.18336
+epo:[37/100] itr:[24/1066] step_time:0s Loss=0.17544
+epo:[37/100] itr:[124/1066] step_time:1s Loss=0.17429
+epo:[37/100] itr:[224/1066] step_time:1s Loss=0.17736
+epo:[37/100] itr:[324/1066] step_time:1s Loss=0.18045
+epo:[37/100] itr:[424/1066] step_time:1s Loss=0.18279
+epo:[37/100] itr:[524/1066] step_time:1s Loss=0.18013
+epo:[37/100] itr:[624/1066] step_time:1s Loss=0.18469
+epo:[37/100] itr:[724/1066] step_time:1s Loss=0.18082
+epo:[37/100] itr:[824/1066] step_time:1s Loss=0.18678
+epo:[37/100] itr:[924/1066] step_time:1s Loss=0.18267
+epo:[37/100] itr:[1024/1066] step_time:1s Loss=0.17804
+epo:[38/100] itr:[58/1066] step_time:0s Loss=0.17421
+epo:[38/100] itr:[158/1066] step_time:1s Loss=0.17901
+epo:[38/100] itr:[258/1066] step_time:1s Loss=0.17468
+epo:[38/100] itr:[358/1066] step_time:1s Loss=0.17410
+epo:[38/100] itr:[458/1066] step_time:1s Loss=0.18336
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.51it/s] 50%|█████     | 4/8 [00:00<00:00,  8.44it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.43it/s]100%|██████████| 8/8 [00:00<00:00, 16.95it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 24.60it/s] 62%|██████▎   | 5/8 [00:00<00:00, 22.86it/s] 88%|████████▊ | 7/8 [00:00<00:00, 21.49it/s]100%|██████████| 8/8 [00:00<00:00, 20.94it/s]
+ACC=0.041375, MRR=0.041375, MAP=0.041375, nDCG=0.041375
+epo:[38/100] itr:[558/1066] step_time:2s Loss=0.17878
+epo:[38/100] itr:[658/1066] step_time:1s Loss=0.17811
+epo:[38/100] itr:[758/1066] step_time:1s Loss=0.18313
+epo:[38/100] itr:[858/1066] step_time:1s Loss=0.17657
+epo:[38/100] itr:[958/1066] step_time:1s Loss=0.18491
+epo:[38/100] itr:[1058/1066] step_time:1s Loss=0.18253
+epo:[39/100] itr:[92/1066] step_time:0s Loss=0.17455
+epo:[39/100] itr:[192/1066] step_time:1s Loss=0.17073
+epo:[39/100] itr:[292/1066] step_time:1s Loss=0.18018
+epo:[39/100] itr:[392/1066] step_time:1s Loss=0.17670
+epo:[39/100] itr:[492/1066] step_time:1s Loss=0.17682
+epo:[39/100] itr:[592/1066] step_time:1s Loss=0.17823
+epo:[39/100] itr:[692/1066] step_time:1s Loss=0.17588
+epo:[39/100] itr:[792/1066] step_time:1s Loss=0.17728
+epo:[39/100] itr:[892/1066] step_time:1s Loss=0.18332
+epo:[39/100] itr:[992/1066] step_time:1s Loss=0.18381
+epo:[40/100] itr:[26/1066] step_time:0s Loss=0.16887
+epo:[40/100] itr:[126/1066] step_time:1s Loss=0.17587
+epo:[40/100] itr:[226/1066] step_time:1s Loss=0.17070
+epo:[40/100] itr:[326/1066] step_time:1s Loss=0.17909
+epo:[40/100] itr:[426/1066] step_time:1s Loss=0.17350
+epo:[40/100] itr:[526/1066] step_time:1s Loss=0.17556
+epo:[40/100] itr:[626/1066] step_time:1s Loss=0.17909
+epo:[40/100] itr:[726/1066] step_time:1s Loss=0.17890
+epo:[40/100] itr:[826/1066] step_time:1s Loss=0.18065
+epo:[40/100] itr:[926/1066] step_time:1s Loss=0.18623
+epo:[40/100] itr:[1026/1066] step_time:1s Loss=0.18454
+epo:[41/100] itr:[60/1066] step_time:0s Loss=0.17035
+epo:[41/100] itr:[160/1066] step_time:1s Loss=0.17330
+epo:[41/100] itr:[260/1066] step_time:1s Loss=0.17528
+epo:[41/100] itr:[360/1066] step_time:1s Loss=0.18007
+epo:[41/100] itr:[460/1066] step_time:1s Loss=0.18152
+epo:[41/100] itr:[560/1066] step_time:1s Loss=0.17966
+epo:[41/100] itr:[660/1066] step_time:1s Loss=0.18433
+epo:[41/100] itr:[760/1066] step_time:1s Loss=0.17232
+epo:[41/100] itr:[860/1066] step_time:1s Loss=0.17722
+epo:[41/100] itr:[960/1066] step_time:1s Loss=0.17583
+epo:[41/100] itr:[1060/1066] step_time:1s Loss=0.18672
+epo:[42/100] itr:[94/1066] step_time:0s Loss=0.16941
+epo:[42/100] itr:[194/1066] step_time:1s Loss=0.17231
+epo:[42/100] itr:[294/1066] step_time:1s Loss=0.17398
+epo:[42/100] itr:[394/1066] step_time:1s Loss=0.17798
+epo:[42/100] itr:[494/1066] step_time:1s Loss=0.17652
+epo:[42/100] itr:[594/1066] step_time:1s Loss=0.17580
+epo:[42/100] itr:[694/1066] step_time:1s Loss=0.17553
+epo:[42/100] itr:[794/1066] step_time:1s Loss=0.17875
+epo:[42/100] itr:[894/1066] step_time:1s Loss=0.17997
+epo:[42/100] itr:[994/1066] step_time:1s Loss=0.17542
+epo:[43/100] itr:[28/1066] step_time:0s Loss=0.17249
+epo:[43/100] itr:[128/1066] step_time:1s Loss=0.17119
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.38it/s] 50%|█████     | 4/8 [00:00<00:00,  9.32it/s] 88%|████████▊ | 7/8 [00:00<00:00, 11.43it/s]100%|██████████| 8/8 [00:00<00:00, 17.46it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 27.16it/s] 75%|███████▌  | 6/8 [00:00<00:00, 27.37it/s]100%|██████████| 8/8 [00:00<00:00, 27.55it/s]
+ACC=0.044125, MRR=0.044125, MAP=0.044125, nDCG=0.044125
+epo:[43/100] itr:[228/1066] step_time:1s Loss=0.16833
+epo:[43/100] itr:[328/1066] step_time:0s Loss=0.16957
+epo:[43/100] itr:[428/1066] step_time:1s Loss=0.17347
+epo:[43/100] itr:[528/1066] step_time:1s Loss=0.17372
+epo:[43/100] itr:[628/1066] step_time:1s Loss=0.17998
+epo:[43/100] itr:[728/1066] step_time:1s Loss=0.17634
+epo:[43/100] itr:[828/1066] step_time:1s Loss=0.17938
+epo:[43/100] itr:[928/1066] step_time:1s Loss=0.17756
+epo:[43/100] itr:[1028/1066] step_time:1s Loss=0.17408
+epo:[44/100] itr:[62/1066] step_time:0s Loss=0.16664
+epo:[44/100] itr:[162/1066] step_time:1s Loss=0.17370
+epo:[44/100] itr:[262/1066] step_time:1s Loss=0.17317
+epo:[44/100] itr:[362/1066] step_time:1s Loss=0.16827
+epo:[44/100] itr:[462/1066] step_time:1s Loss=0.17636
+epo:[44/100] itr:[562/1066] step_time:1s Loss=0.17806
+epo:[44/100] itr:[662/1066] step_time:1s Loss=0.17906
+epo:[44/100] itr:[762/1066] step_time:1s Loss=0.17651
+epo:[44/100] itr:[862/1066] step_time:1s Loss=0.17461
+epo:[44/100] itr:[962/1066] step_time:1s Loss=0.17805
+epo:[44/100] itr:[1062/1066] step_time:1s Loss=0.17620
+epo:[45/100] itr:[96/1066] step_time:0s Loss=0.17051
+epo:[45/100] itr:[196/1066] step_time:1s Loss=0.17430
+epo:[45/100] itr:[296/1066] step_time:1s Loss=0.16851
+epo:[45/100] itr:[396/1066] step_time:1s Loss=0.17826
+epo:[45/100] itr:[496/1066] step_time:1s Loss=0.17738
+epo:[45/100] itr:[596/1066] step_time:1s Loss=0.17477
+epo:[45/100] itr:[696/1066] step_time:1s Loss=0.17612
+epo:[45/100] itr:[796/1066] step_time:1s Loss=0.17263
+epo:[45/100] itr:[896/1066] step_time:1s Loss=0.17361
+epo:[45/100] itr:[996/1066] step_time:1s Loss=0.17368
+epo:[46/100] itr:[30/1066] step_time:0s Loss=0.17151
+epo:[46/100] itr:[130/1066] step_time:1s Loss=0.16909
+epo:[46/100] itr:[230/1066] step_time:1s Loss=0.17795
+epo:[46/100] itr:[330/1066] step_time:1s Loss=0.17381
+epo:[46/100] itr:[430/1066] step_time:1s Loss=0.17345
+epo:[46/100] itr:[530/1066] step_time:1s Loss=0.17511
+epo:[46/100] itr:[630/1066] step_time:1s Loss=0.18054
+epo:[46/100] itr:[730/1066] step_time:1s Loss=0.17152
+epo:[46/100] itr:[830/1066] step_time:1s Loss=0.17583
+epo:[46/100] itr:[930/1066] step_time:1s Loss=0.17371
+epo:[46/100] itr:[1030/1066] step_time:1s Loss=0.17195
+epo:[47/100] itr:[64/1066] step_time:0s Loss=0.17159
+epo:[47/100] itr:[164/1066] step_time:1s Loss=0.17115
+epo:[47/100] itr:[264/1066] step_time:1s Loss=0.16592
+epo:[47/100] itr:[364/1066] step_time:1s Loss=0.16770
+epo:[47/100] itr:[464/1066] step_time:1s Loss=0.17143
+epo:[47/100] itr:[564/1066] step_time:1s Loss=0.16670
+epo:[47/100] itr:[664/1066] step_time:1s Loss=0.17519
+epo:[47/100] itr:[764/1066] step_time:1s Loss=0.17141
+epo:[47/100] itr:[864/1066] step_time:1s Loss=0.17721
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.61it/s] 50%|█████     | 4/8 [00:00<00:00,  8.57it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.62it/s]100%|██████████| 8/8 [00:00<00:00, 17.40it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 26.97it/s] 75%|███████▌  | 6/8 [00:00<00:00, 27.20it/s]100%|██████████| 8/8 [00:00<00:00, 27.41it/s]
+ACC=0.04525, MRR=0.04525, MAP=0.04525, nDCG=0.04525
+epo:[47/100] itr:[964/1066] step_time:2s Loss=0.17745
+epo:[47/100] itr:[1064/1066] step_time:1s Loss=0.17129
+epo:[48/100] itr:[98/1066] step_time:1s Loss=0.16947
+epo:[48/100] itr:[198/1066] step_time:1s Loss=0.17162
+epo:[48/100] itr:[298/1066] step_time:1s Loss=0.17115
+epo:[48/100] itr:[398/1066] step_time:1s Loss=0.16784
+epo:[48/100] itr:[498/1066] step_time:1s Loss=0.17262
+epo:[48/100] itr:[598/1066] step_time:1s Loss=0.17364
+epo:[48/100] itr:[698/1066] step_time:1s Loss=0.17421
+epo:[48/100] itr:[798/1066] step_time:1s Loss=0.17378
+epo:[48/100] itr:[898/1066] step_time:1s Loss=0.17343
+epo:[48/100] itr:[998/1066] step_time:1s Loss=0.17614
+epo:[49/100] itr:[32/1066] step_time:0s Loss=0.16260
+epo:[49/100] itr:[132/1066] step_time:1s Loss=0.16612
+epo:[49/100] itr:[232/1066] step_time:1s Loss=0.16553
+epo:[49/100] itr:[332/1066] step_time:1s Loss=0.16672
+epo:[49/100] itr:[432/1066] step_time:1s Loss=0.17305
+epo:[49/100] itr:[532/1066] step_time:1s Loss=0.17089
+epo:[49/100] itr:[632/1066] step_time:1s Loss=0.17208
+epo:[49/100] itr:[732/1066] step_time:1s Loss=0.16867
+epo:[49/100] itr:[832/1066] step_time:1s Loss=0.17407
+epo:[49/100] itr:[932/1066] step_time:1s Loss=0.17336
+epo:[49/100] itr:[1032/1066] step_time:1s Loss=0.17432
+epo:[50/100] itr:[66/1066] step_time:0s Loss=0.16870
+epo:[50/100] itr:[166/1066] step_time:1s Loss=0.16591
+epo:[50/100] itr:[266/1066] step_time:1s Loss=0.17283
+epo:[50/100] itr:[366/1066] step_time:1s Loss=0.17130
+epo:[50/100] itr:[466/1066] step_time:1s Loss=0.17122
+epo:[50/100] itr:[566/1066] step_time:1s Loss=0.17086
+epo:[50/100] itr:[666/1066] step_time:1s Loss=0.17004
+epo:[50/100] itr:[766/1066] step_time:1s Loss=0.16979
+epo:[50/100] itr:[866/1066] step_time:1s Loss=0.17236
+epo:[50/100] itr:[966/1066] step_time:1s Loss=0.17501
+epo:[51/100] itr:[0/1066] step_time:0s Loss=0.14358
+epo:[51/100] itr:[100/1066] step_time:0s Loss=0.16813
+epo:[51/100] itr:[200/1066] step_time:1s Loss=0.16539
+epo:[51/100] itr:[300/1066] step_time:1s Loss=0.16742
+epo:[51/100] itr:[400/1066] step_time:1s Loss=0.16966
+epo:[51/100] itr:[500/1066] step_time:1s Loss=0.17079
+epo:[51/100] itr:[600/1066] step_time:1s Loss=0.17290
+epo:[51/100] itr:[700/1066] step_time:1s Loss=0.16994
+epo:[51/100] itr:[800/1066] step_time:1s Loss=0.16848
+epo:[51/100] itr:[900/1066] step_time:1s Loss=0.17037
+epo:[51/100] itr:[1000/1066] step_time:1s Loss=0.17135
+epo:[52/100] itr:[34/1066] step_time:0s Loss=0.16622
+epo:[52/100] itr:[134/1066] step_time:1s Loss=0.16709
+epo:[52/100] itr:[234/1066] step_time:1s Loss=0.17132
+epo:[52/100] itr:[334/1066] step_time:1s Loss=0.17413
+epo:[52/100] itr:[434/1066] step_time:1s Loss=0.16794
+epo:[52/100] itr:[534/1066] step_time:1s Loss=0.16779
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.57it/s] 50%|█████     | 4/8 [00:00<00:00,  8.39it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.42it/s]100%|██████████| 8/8 [00:00<00:00, 16.44it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 50%|█████     | 4/8 [00:00<00:00, 32.17it/s]100%|██████████| 8/8 [00:00<00:00, 32.46it/s]
+ACC=0.04075, MRR=0.04075, MAP=0.04075, nDCG=0.04075
+epo:[52/100] itr:[634/1066] step_time:1s Loss=0.16902
+epo:[52/100] itr:[734/1066] step_time:1s Loss=0.16914
+epo:[52/100] itr:[834/1066] step_time:1s Loss=0.17260
+epo:[52/100] itr:[934/1066] step_time:1s Loss=0.17269
+epo:[52/100] itr:[1034/1066] step_time:1s Loss=0.17672
+epo:[53/100] itr:[68/1066] step_time:0s Loss=0.16952
+epo:[53/100] itr:[168/1066] step_time:1s Loss=0.16155
+epo:[53/100] itr:[268/1066] step_time:1s Loss=0.16401
+epo:[53/100] itr:[368/1066] step_time:1s Loss=0.16281
+epo:[53/100] itr:[468/1066] step_time:1s Loss=0.17355
+epo:[53/100] itr:[568/1066] step_time:1s Loss=0.16998
+epo:[53/100] itr:[668/1066] step_time:1s Loss=0.17130
+epo:[53/100] itr:[768/1066] step_time:1s Loss=0.17638
+epo:[53/100] itr:[868/1066] step_time:1s Loss=0.17268
+epo:[53/100] itr:[968/1066] step_time:1s Loss=0.17539
+epo:[54/100] itr:[2/1066] step_time:0s Loss=0.14767
+epo:[54/100] itr:[102/1066] step_time:1s Loss=0.16549
+epo:[54/100] itr:[202/1066] step_time:1s Loss=0.16362
+epo:[54/100] itr:[302/1066] step_time:1s Loss=0.17054
+epo:[54/100] itr:[402/1066] step_time:1s Loss=0.17471
+epo:[54/100] itr:[502/1066] step_time:1s Loss=0.16210
+epo:[54/100] itr:[602/1066] step_time:1s Loss=0.16697
+epo:[54/100] itr:[702/1066] step_time:1s Loss=0.16976
+epo:[54/100] itr:[802/1066] step_time:1s Loss=0.16857
+epo:[54/100] itr:[902/1066] step_time:1s Loss=0.16990
+epo:[54/100] itr:[1002/1066] step_time:1s Loss=0.17220
+epo:[55/100] itr:[36/1066] step_time:0s Loss=0.16252
+epo:[55/100] itr:[136/1066] step_time:1s Loss=0.16732
+epo:[55/100] itr:[236/1066] step_time:1s Loss=0.16933
+epo:[55/100] itr:[336/1066] step_time:1s Loss=0.16442
+epo:[55/100] itr:[436/1066] step_time:1s Loss=0.16617
+epo:[55/100] itr:[536/1066] step_time:1s Loss=0.16578
+epo:[55/100] itr:[636/1066] step_time:1s Loss=0.16633
+epo:[55/100] itr:[736/1066] step_time:1s Loss=0.16758
+epo:[55/100] itr:[836/1066] step_time:1s Loss=0.17043
+epo:[55/100] itr:[936/1066] step_time:1s Loss=0.16842
+epo:[55/100] itr:[1036/1066] step_time:1s Loss=0.16972
+epo:[56/100] itr:[70/1066] step_time:0s Loss=0.16611
+epo:[56/100] itr:[170/1066] step_time:1s Loss=0.15930
+epo:[56/100] itr:[270/1066] step_time:1s Loss=0.16301
+epo:[56/100] itr:[370/1066] step_time:1s Loss=0.16498
+epo:[56/100] itr:[470/1066] step_time:1s Loss=0.16357
+epo:[56/100] itr:[570/1066] step_time:1s Loss=0.16906
+epo:[56/100] itr:[670/1066] step_time:1s Loss=0.16951
+epo:[56/100] itr:[770/1066] step_time:1s Loss=0.17061
+epo:[56/100] itr:[870/1066] step_time:1s Loss=0.16972
+epo:[56/100] itr:[970/1066] step_time:1s Loss=0.16753
+epo:[57/100] itr:[4/1066] step_time:0s Loss=0.15365
+epo:[57/100] itr:[104/1066] step_time:0s Loss=0.16267
+epo:[57/100] itr:[204/1066] step_time:1s Loss=0.16710
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.83it/s] 50%|█████     | 4/8 [00:00<00:00,  8.77it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.90it/s]100%|██████████| 8/8 [00:00<00:00, 17.47it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 50%|█████     | 4/8 [00:00<00:00, 32.05it/s]100%|██████████| 8/8 [00:00<00:00, 32.29it/s]
+ACC=0.04525, MRR=0.04525, MAP=0.04525, nDCG=0.04525
+epo:[57/100] itr:[304/1066] step_time:2s Loss=0.16423
+epo:[57/100] itr:[404/1066] step_time:1s Loss=0.15995
+epo:[57/100] itr:[504/1066] step_time:1s Loss=0.16810
+epo:[57/100] itr:[604/1066] step_time:1s Loss=0.16703
+epo:[57/100] itr:[704/1066] step_time:1s Loss=0.16446
+epo:[57/100] itr:[804/1066] step_time:1s Loss=0.16642
+epo:[57/100] itr:[904/1066] step_time:1s Loss=0.16430
+epo:[57/100] itr:[1004/1066] step_time:1s Loss=0.17250
+epo:[58/100] itr:[38/1066] step_time:0s Loss=0.16344
+epo:[58/100] itr:[138/1066] step_time:1s Loss=0.16600
+epo:[58/100] itr:[238/1066] step_time:1s Loss=0.16029
+epo:[58/100] itr:[338/1066] step_time:1s Loss=0.16454
+epo:[58/100] itr:[438/1066] step_time:1s Loss=0.16423
+epo:[58/100] itr:[538/1066] step_time:0s Loss=0.16576
+epo:[58/100] itr:[638/1066] step_time:1s Loss=0.16480
+epo:[58/100] itr:[738/1066] step_time:1s Loss=0.16852
+epo:[58/100] itr:[838/1066] step_time:1s Loss=0.17191
+epo:[58/100] itr:[938/1066] step_time:1s Loss=0.16836
+epo:[58/100] itr:[1038/1066] step_time:1s Loss=0.16764
+epo:[59/100] itr:[72/1066] step_time:0s Loss=0.16540
+epo:[59/100] itr:[172/1066] step_time:1s Loss=0.16043
+epo:[59/100] itr:[272/1066] step_time:1s Loss=0.16494
+epo:[59/100] itr:[372/1066] step_time:1s Loss=0.16692
+epo:[59/100] itr:[472/1066] step_time:1s Loss=0.16638
+epo:[59/100] itr:[572/1066] step_time:1s Loss=0.16337
+epo:[59/100] itr:[672/1066] step_time:1s Loss=0.16160
+epo:[59/100] itr:[772/1066] step_time:1s Loss=0.17224
+epo:[59/100] itr:[872/1066] step_time:1s Loss=0.16756
+epo:[59/100] itr:[972/1066] step_time:1s Loss=0.16885
+epo:[60/100] itr:[6/1066] step_time:0s Loss=0.15637
+epo:[60/100] itr:[106/1066] step_time:0s Loss=0.16250
+epo:[60/100] itr:[206/1066] step_time:1s Loss=0.16263
+epo:[60/100] itr:[306/1066] step_time:1s Loss=0.16401
+epo:[60/100] itr:[406/1066] step_time:1s Loss=0.16354
+epo:[60/100] itr:[506/1066] step_time:1s Loss=0.16744
+epo:[60/100] itr:[606/1066] step_time:1s Loss=0.16559
+epo:[60/100] itr:[706/1066] step_time:1s Loss=0.16892
+epo:[60/100] itr:[806/1066] step_time:1s Loss=0.16961
+epo:[60/100] itr:[906/1066] step_time:1s Loss=0.16572
+epo:[60/100] itr:[1006/1066] step_time:1s Loss=0.16789
+epo:[61/100] itr:[40/1066] step_time:0s Loss=0.16218
+epo:[61/100] itr:[140/1066] step_time:1s Loss=0.16060
+epo:[61/100] itr:[240/1066] step_time:1s Loss=0.16316
+epo:[61/100] itr:[340/1066] step_time:1s Loss=0.16624
+epo:[61/100] itr:[440/1066] step_time:1s Loss=0.16259
+epo:[61/100] itr:[540/1066] step_time:1s Loss=0.16187
+epo:[61/100] itr:[640/1066] step_time:1s Loss=0.16519
+epo:[61/100] itr:[740/1066] step_time:1s Loss=0.15972
+epo:[61/100] itr:[840/1066] step_time:1s Loss=0.16994
+epo:[61/100] itr:[940/1066] step_time:1s Loss=0.16775
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.01it/s] 50%|█████     | 4/8 [00:00<00:00,  8.95it/s] 88%|████████▊ | 7/8 [00:00<00:00, 11.12it/s]100%|██████████| 8/8 [00:00<00:00, 17.44it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 50%|█████     | 4/8 [00:00<00:00, 31.98it/s]100%|██████████| 8/8 [00:00<00:00, 32.24it/s]
+ACC=0.0445, MRR=0.0445, MAP=0.0445, nDCG=0.0445
+epo:[61/100] itr:[1040/1066] step_time:1s Loss=0.16658
+epo:[62/100] itr:[74/1066] step_time:0s Loss=0.16384
+epo:[62/100] itr:[174/1066] step_time:1s Loss=0.16344
+epo:[62/100] itr:[274/1066] step_time:1s Loss=0.16344
+epo:[62/100] itr:[374/1066] step_time:1s Loss=0.16611
+epo:[62/100] itr:[474/1066] step_time:1s Loss=0.16183
+epo:[62/100] itr:[574/1066] step_time:1s Loss=0.15600
+epo:[62/100] itr:[674/1066] step_time:1s Loss=0.16289
+epo:[62/100] itr:[774/1066] step_time:1s Loss=0.17000
+epo:[62/100] itr:[874/1066] step_time:1s Loss=0.16454
+epo:[62/100] itr:[974/1066] step_time:1s Loss=0.16400
+epo:[63/100] itr:[8/1066] step_time:0s Loss=0.15543
+epo:[63/100] itr:[108/1066] step_time:0s Loss=0.16187
+epo:[63/100] itr:[208/1066] step_time:1s Loss=0.16501
+epo:[63/100] itr:[308/1066] step_time:1s Loss=0.16306
+epo:[63/100] itr:[408/1066] step_time:1s Loss=0.16213
+epo:[63/100] itr:[508/1066] step_time:1s Loss=0.16177
+epo:[63/100] itr:[608/1066] step_time:1s Loss=0.15860
+epo:[63/100] itr:[708/1066] step_time:1s Loss=0.16300
+epo:[63/100] itr:[808/1066] step_time:1s Loss=0.16850
+epo:[63/100] itr:[908/1066] step_time:1s Loss=0.16784
+epo:[63/100] itr:[1008/1066] step_time:1s Loss=0.16684
+epo:[64/100] itr:[42/1066] step_time:0s Loss=0.15578
+epo:[64/100] itr:[142/1066] step_time:1s Loss=0.16318
+epo:[64/100] itr:[242/1066] step_time:1s Loss=0.16054
+epo:[64/100] itr:[342/1066] step_time:1s Loss=0.16315
+epo:[64/100] itr:[442/1066] step_time:1s Loss=0.16324
+epo:[64/100] itr:[542/1066] step_time:1s Loss=0.16031
+epo:[64/100] itr:[642/1066] step_time:1s Loss=0.16326
+epo:[64/100] itr:[742/1066] step_time:1s Loss=0.16209
+epo:[64/100] itr:[842/1066] step_time:1s Loss=0.16061
+epo:[64/100] itr:[942/1066] step_time:1s Loss=0.16500
+epo:[64/100] itr:[1042/1066] step_time:1s Loss=0.16448
+epo:[65/100] itr:[76/1066] step_time:0s Loss=0.16298
+epo:[65/100] itr:[176/1066] step_time:1s Loss=0.15925
+epo:[65/100] itr:[276/1066] step_time:1s Loss=0.16321
+epo:[65/100] itr:[376/1066] step_time:1s Loss=0.15941
+epo:[65/100] itr:[476/1066] step_time:1s Loss=0.15878
+epo:[65/100] itr:[576/1066] step_time:1s Loss=0.15754
+epo:[65/100] itr:[676/1066] step_time:1s Loss=0.16365
+epo:[65/100] itr:[776/1066] step_time:1s Loss=0.16576
+epo:[65/100] itr:[876/1066] step_time:1s Loss=0.16006
+epo:[65/100] itr:[976/1066] step_time:1s Loss=0.16458
+epo:[66/100] itr:[10/1066] step_time:0s Loss=0.14447
+epo:[66/100] itr:[110/1066] step_time:1s Loss=0.16215
+epo:[66/100] itr:[210/1066] step_time:1s Loss=0.15541
+epo:[66/100] itr:[310/1066] step_time:1s Loss=0.15638
+epo:[66/100] itr:[410/1066] step_time:1s Loss=0.15950
+epo:[66/100] itr:[510/1066] step_time:1s Loss=0.16079
+epo:[66/100] itr:[610/1066] step_time:1s Loss=0.16427
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.80it/s] 50%|█████     | 4/8 [00:00<00:00,  8.77it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.85it/s]100%|██████████| 8/8 [00:00<00:00, 17.11it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 27.01it/s] 75%|███████▌  | 6/8 [00:00<00:00, 27.19it/s]100%|██████████| 8/8 [00:00<00:00, 27.36it/s]
+ACC=0.047, MRR=0.047, MAP=0.047, nDCG=0.047
+epo:[66/100] itr:[710/1066] step_time:2s Loss=0.15956
+epo:[66/100] itr:[810/1066] step_time:1s Loss=0.16076
+epo:[66/100] itr:[910/1066] step_time:1s Loss=0.16139
+epo:[66/100] itr:[1010/1066] step_time:1s Loss=0.16561
+epo:[67/100] itr:[44/1066] step_time:0s Loss=0.15007
+epo:[67/100] itr:[144/1066] step_time:1s Loss=0.15972
+epo:[67/100] itr:[244/1066] step_time:1s Loss=0.15816
+epo:[67/100] itr:[344/1066] step_time:1s Loss=0.15822
+epo:[67/100] itr:[444/1066] step_time:1s Loss=0.15573
+epo:[67/100] itr:[544/1066] step_time:1s Loss=0.16533
+epo:[67/100] itr:[644/1066] step_time:1s Loss=0.15870
+epo:[67/100] itr:[744/1066] step_time:1s Loss=0.15789
+epo:[67/100] itr:[844/1066] step_time:1s Loss=0.15985
+epo:[67/100] itr:[944/1066] step_time:1s Loss=0.16035
+epo:[67/100] itr:[1044/1066] step_time:1s Loss=0.15938
+epo:[68/100] itr:[78/1066] step_time:0s Loss=0.15579
+epo:[68/100] itr:[178/1066] step_time:1s Loss=0.16206
+epo:[68/100] itr:[278/1066] step_time:1s Loss=0.16006
+epo:[68/100] itr:[378/1066] step_time:1s Loss=0.15891
+epo:[68/100] itr:[478/1066] step_time:1s Loss=0.15887
+epo:[68/100] itr:[578/1066] step_time:1s Loss=0.15791
+epo:[68/100] itr:[678/1066] step_time:1s Loss=0.16240
+epo:[68/100] itr:[778/1066] step_time:1s Loss=0.16524
+epo:[68/100] itr:[878/1066] step_time:1s Loss=0.16045
+epo:[68/100] itr:[978/1066] step_time:1s Loss=0.16286
+epo:[69/100] itr:[12/1066] step_time:0s Loss=0.16295
+epo:[69/100] itr:[112/1066] step_time:0s Loss=0.15856
+epo:[69/100] itr:[212/1066] step_time:0s Loss=0.16014
+epo:[69/100] itr:[312/1066] step_time:1s Loss=0.16056
+epo:[69/100] itr:[412/1066] step_time:1s Loss=0.16086
+epo:[69/100] itr:[512/1066] step_time:1s Loss=0.16440
+epo:[69/100] itr:[612/1066] step_time:1s Loss=0.16001
+epo:[69/100] itr:[712/1066] step_time:1s Loss=0.15818
+epo:[69/100] itr:[812/1066] step_time:1s Loss=0.15875
+epo:[69/100] itr:[912/1066] step_time:1s Loss=0.16120
+epo:[69/100] itr:[1012/1066] step_time:1s Loss=0.16374
+epo:[70/100] itr:[46/1066] step_time:0s Loss=0.16156
+epo:[70/100] itr:[146/1066] step_time:1s Loss=0.16041
+epo:[70/100] itr:[246/1066] step_time:1s Loss=0.16121
+epo:[70/100] itr:[346/1066] step_time:1s Loss=0.15115
+epo:[70/100] itr:[446/1066] step_time:1s Loss=0.16240
+epo:[70/100] itr:[546/1066] step_time:1s Loss=0.15883
+epo:[70/100] itr:[646/1066] step_time:1s Loss=0.15641
+epo:[70/100] itr:[746/1066] step_time:1s Loss=0.15658
+epo:[70/100] itr:[846/1066] step_time:1s Loss=0.15988
+epo:[70/100] itr:[946/1066] step_time:1s Loss=0.16360
+epo:[70/100] itr:[1046/1066] step_time:1s Loss=0.16112
+epo:[71/100] itr:[80/1066] step_time:0s Loss=0.16064
+epo:[71/100] itr:[180/1066] step_time:1s Loss=0.15787
+epo:[71/100] itr:[280/1066] step_time:1s Loss=0.15614
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.81it/s] 50%|█████     | 4/8 [00:00<00:00,  8.73it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.84it/s]100%|██████████| 8/8 [00:00<00:00, 17.16it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 26.99it/s] 75%|███████▌  | 6/8 [00:00<00:00, 27.23it/s]100%|██████████| 8/8 [00:00<00:00, 27.42it/s]
+ACC=0.047, MRR=0.047, MAP=0.047, nDCG=0.047
+epo:[71/100] itr:[380/1066] step_time:1s Loss=0.15833
+epo:[71/100] itr:[480/1066] step_time:0s Loss=0.16264
+epo:[71/100] itr:[580/1066] step_time:1s Loss=0.15521
+epo:[71/100] itr:[680/1066] step_time:1s Loss=0.15591
+epo:[71/100] itr:[780/1066] step_time:1s Loss=0.16043
+epo:[71/100] itr:[880/1066] step_time:1s Loss=0.16270
+epo:[71/100] itr:[980/1066] step_time:1s Loss=0.15736
+epo:[72/100] itr:[14/1066] step_time:0s Loss=0.15409
+epo:[72/100] itr:[114/1066] step_time:1s Loss=0.15957
+epo:[72/100] itr:[214/1066] step_time:1s Loss=0.15351
+epo:[72/100] itr:[314/1066] step_time:1s Loss=0.15953
+epo:[72/100] itr:[414/1066] step_time:1s Loss=0.15888
+epo:[72/100] itr:[514/1066] step_time:1s Loss=0.15834
+epo:[72/100] itr:[614/1066] step_time:1s Loss=0.15702
+epo:[72/100] itr:[714/1066] step_time:1s Loss=0.15682
+epo:[72/100] itr:[814/1066] step_time:1s Loss=0.16483
+epo:[72/100] itr:[914/1066] step_time:1s Loss=0.16145
+epo:[72/100] itr:[1014/1066] step_time:1s Loss=0.16309
+epo:[73/100] itr:[48/1066] step_time:0s Loss=0.15338
+epo:[73/100] itr:[148/1066] step_time:1s Loss=0.15984
+epo:[73/100] itr:[248/1066] step_time:1s Loss=0.15619
+epo:[73/100] itr:[348/1066] step_time:1s Loss=0.15496
+epo:[73/100] itr:[448/1066] step_time:1s Loss=0.15967
+epo:[73/100] itr:[548/1066] step_time:1s Loss=0.15786
+epo:[73/100] itr:[648/1066] step_time:1s Loss=0.15819
+epo:[73/100] itr:[748/1066] step_time:1s Loss=0.15759
+epo:[73/100] itr:[848/1066] step_time:1s Loss=0.16047
+epo:[73/100] itr:[948/1066] step_time:1s Loss=0.16290
+epo:[73/100] itr:[1048/1066] step_time:1s Loss=0.16063
+epo:[74/100] itr:[82/1066] step_time:0s Loss=0.15542
+epo:[74/100] itr:[182/1066] step_time:1s Loss=0.15334
+epo:[74/100] itr:[282/1066] step_time:1s Loss=0.15934
+epo:[74/100] itr:[382/1066] step_time:1s Loss=0.15981
+epo:[74/100] itr:[482/1066] step_time:1s Loss=0.15802
+epo:[74/100] itr:[582/1066] step_time:1s Loss=0.15890
+epo:[74/100] itr:[682/1066] step_time:1s Loss=0.15825
+epo:[74/100] itr:[782/1066] step_time:1s Loss=0.16087
+epo:[74/100] itr:[882/1066] step_time:1s Loss=0.15967
+epo:[74/100] itr:[982/1066] step_time:1s Loss=0.15858
+epo:[75/100] itr:[16/1066] step_time:0s Loss=0.15629
+epo:[75/100] itr:[116/1066] step_time:1s Loss=0.15431
+epo:[75/100] itr:[216/1066] step_time:1s Loss=0.15366
+epo:[75/100] itr:[316/1066] step_time:1s Loss=0.15676
+epo:[75/100] itr:[416/1066] step_time:1s Loss=0.15692
+epo:[75/100] itr:[516/1066] step_time:1s Loss=0.15729
+epo:[75/100] itr:[616/1066] step_time:1s Loss=0.15895
+epo:[75/100] itr:[716/1066] step_time:1s Loss=0.15709
+epo:[75/100] itr:[816/1066] step_time:1s Loss=0.15592
+epo:[75/100] itr:[916/1066] step_time:1s Loss=0.15945
+epo:[75/100] itr:[1016/1066] step_time:1s Loss=0.16057
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.97it/s] 50%|█████     | 4/8 [00:00<00:00,  8.94it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.95it/s]100%|██████████| 8/8 [00:00<00:00, 17.13it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 50%|█████     | 4/8 [00:00<00:00, 32.33it/s]100%|██████████| 8/8 [00:00<00:00, 32.52it/s]
+ACC=0.046625, MRR=0.046625, MAP=0.046625, nDCG=0.046625
+epo:[76/100] itr:[50/1066] step_time:1s Loss=0.15676
+epo:[76/100] itr:[150/1066] step_time:1s Loss=0.15896
+epo:[76/100] itr:[250/1066] step_time:1s Loss=0.15578
+epo:[76/100] itr:[350/1066] step_time:1s Loss=0.15516
+epo:[76/100] itr:[450/1066] step_time:1s Loss=0.15834
+epo:[76/100] itr:[550/1066] step_time:1s Loss=0.15491
+epo:[76/100] itr:[650/1066] step_time:1s Loss=0.15418
+epo:[76/100] itr:[750/1066] step_time:1s Loss=0.15900
+epo:[76/100] itr:[850/1066] step_time:1s Loss=0.15778
+epo:[76/100] itr:[950/1066] step_time:1s Loss=0.15490
+epo:[76/100] itr:[1050/1066] step_time:1s Loss=0.16025
+epo:[77/100] itr:[84/1066] step_time:0s Loss=0.15599
+epo:[77/100] itr:[184/1066] step_time:1s Loss=0.15463
+epo:[77/100] itr:[284/1066] step_time:1s Loss=0.15565
+epo:[77/100] itr:[384/1066] step_time:1s Loss=0.15530
+epo:[77/100] itr:[484/1066] step_time:1s Loss=0.15513
+epo:[77/100] itr:[584/1066] step_time:1s Loss=0.15718
+epo:[77/100] itr:[684/1066] step_time:1s Loss=0.15749
+epo:[77/100] itr:[784/1066] step_time:1s Loss=0.15651
+epo:[77/100] itr:[884/1066] step_time:1s Loss=0.16233
+epo:[77/100] itr:[984/1066] step_time:1s Loss=0.15452
+epo:[78/100] itr:[18/1066] step_time:0s Loss=0.15341
+epo:[78/100] itr:[118/1066] step_time:1s Loss=0.15418
+epo:[78/100] itr:[218/1066] step_time:1s Loss=0.15579
+epo:[78/100] itr:[318/1066] step_time:1s Loss=0.16036
+epo:[78/100] itr:[418/1066] step_time:1s Loss=0.15374
+epo:[78/100] itr:[518/1066] step_time:1s Loss=0.15714
+epo:[78/100] itr:[618/1066] step_time:1s Loss=0.15539
+epo:[78/100] itr:[718/1066] step_time:1s Loss=0.15796
+epo:[78/100] itr:[818/1066] step_time:1s Loss=0.15557
+epo:[78/100] itr:[918/1066] step_time:1s Loss=0.15908
+epo:[78/100] itr:[1018/1066] step_time:1s Loss=0.15685
+epo:[79/100] itr:[52/1066] step_time:0s Loss=0.15656
+epo:[79/100] itr:[152/1066] step_time:1s Loss=0.15378
+epo:[79/100] itr:[252/1066] step_time:1s Loss=0.15655
+epo:[79/100] itr:[352/1066] step_time:1s Loss=0.15702
+epo:[79/100] itr:[452/1066] step_time:1s Loss=0.15667
+epo:[79/100] itr:[552/1066] step_time:1s Loss=0.15956
+epo:[79/100] itr:[652/1066] step_time:1s Loss=0.15907
+epo:[79/100] itr:[752/1066] step_time:1s Loss=0.15526
+epo:[79/100] itr:[852/1066] step_time:1s Loss=0.15832
+epo:[79/100] itr:[952/1066] step_time:1s Loss=0.15590
+epo:[79/100] itr:[1052/1066] step_time:1s Loss=0.15938
+epo:[80/100] itr:[86/1066] step_time:0s Loss=0.15196
+epo:[80/100] itr:[186/1066] step_time:1s Loss=0.15530
+epo:[80/100] itr:[286/1066] step_time:1s Loss=0.15297
+epo:[80/100] itr:[386/1066] step_time:1s Loss=0.16162
+epo:[80/100] itr:[486/1066] step_time:1s Loss=0.15158
+epo:[80/100] itr:[586/1066] step_time:1s Loss=0.16081
+epo:[80/100] itr:[686/1066] step_time:1s Loss=0.15634
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.24it/s] 50%|█████     | 4/8 [00:00<00:00,  7.96it/s] 88%|████████▊ | 7/8 [00:00<00:00,  9.81it/s]100%|██████████| 8/8 [00:00<00:00, 15.25it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 26.85it/s] 88%|████████▊ | 7/8 [00:00<00:00, 28.12it/s]100%|██████████| 8/8 [00:00<00:00, 29.73it/s]
+ACC=0.044875, MRR=0.044875, MAP=0.044875, nDCG=0.044875
+epo:[80/100] itr:[786/1066] step_time:2s Loss=0.16013
+epo:[80/100] itr:[886/1066] step_time:1s Loss=0.15347
+epo:[80/100] itr:[986/1066] step_time:1s Loss=0.15531
+epo:[81/100] itr:[20/1066] step_time:0s Loss=0.15991
+epo:[81/100] itr:[120/1066] step_time:1s Loss=0.15355
+epo:[81/100] itr:[220/1066] step_time:1s Loss=0.15321
+epo:[81/100] itr:[320/1066] step_time:1s Loss=0.15287
+epo:[81/100] itr:[420/1066] step_time:1s Loss=0.15978
+epo:[81/100] itr:[520/1066] step_time:1s Loss=0.15458
+epo:[81/100] itr:[620/1066] step_time:1s Loss=0.15640
+epo:[81/100] itr:[720/1066] step_time:1s Loss=0.15388
+epo:[81/100] itr:[820/1066] step_time:1s Loss=0.15754
+epo:[81/100] itr:[920/1066] step_time:1s Loss=0.15497
+epo:[81/100] itr:[1020/1066] step_time:1s Loss=0.15991
+epo:[82/100] itr:[54/1066] step_time:0s Loss=0.15388
+epo:[82/100] itr:[154/1066] step_time:1s Loss=0.15102
+epo:[82/100] itr:[254/1066] step_time:1s Loss=0.15777
+epo:[82/100] itr:[354/1066] step_time:1s Loss=0.15467
+epo:[82/100] itr:[454/1066] step_time:1s Loss=0.15691
+epo:[82/100] itr:[554/1066] step_time:1s Loss=0.15552
+epo:[82/100] itr:[654/1066] step_time:1s Loss=0.15791
+epo:[82/100] itr:[754/1066] step_time:1s Loss=0.15784
+epo:[82/100] itr:[854/1066] step_time:1s Loss=0.15272
+epo:[82/100] itr:[954/1066] step_time:1s Loss=0.15930
+epo:[82/100] itr:[1054/1066] step_time:1s Loss=0.15320
+epo:[83/100] itr:[88/1066] step_time:1s Loss=0.15635
+epo:[83/100] itr:[188/1066] step_time:1s Loss=0.15076
+epo:[83/100] itr:[288/1066] step_time:1s Loss=0.15534
+epo:[83/100] itr:[388/1066] step_time:1s Loss=0.15063
+epo:[83/100] itr:[488/1066] step_time:1s Loss=0.15070
+epo:[83/100] itr:[588/1066] step_time:1s Loss=0.15441
+epo:[83/100] itr:[688/1066] step_time:1s Loss=0.15372
+epo:[83/100] itr:[788/1066] step_time:1s Loss=0.15505
+epo:[83/100] itr:[888/1066] step_time:1s Loss=0.14820
+epo:[83/100] itr:[988/1066] step_time:1s Loss=0.15583
+epo:[84/100] itr:[22/1066] step_time:0s Loss=0.14696
+epo:[84/100] itr:[122/1066] step_time:1s Loss=0.15251
+epo:[84/100] itr:[222/1066] step_time:1s Loss=0.15224
+epo:[84/100] itr:[322/1066] step_time:1s Loss=0.15253
+epo:[84/100] itr:[422/1066] step_time:1s Loss=0.15294
+epo:[84/100] itr:[522/1066] step_time:1s Loss=0.15784
+epo:[84/100] itr:[622/1066] step_time:1s Loss=0.15355
+epo:[84/100] itr:[722/1066] step_time:1s Loss=0.15183
+epo:[84/100] itr:[822/1066] step_time:1s Loss=0.15471
+epo:[84/100] itr:[922/1066] step_time:1s Loss=0.15367
+epo:[84/100] itr:[1022/1066] step_time:1s Loss=0.15380
+epo:[85/100] itr:[56/1066] step_time:0s Loss=0.15429
+epo:[85/100] itr:[156/1066] step_time:1s Loss=0.15797
+epo:[85/100] itr:[256/1066] step_time:1s Loss=0.15603
+epo:[85/100] itr:[356/1066] step_time:1s Loss=0.15091
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.70it/s] 50%|█████     | 4/8 [00:00<00:00,  8.61it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.70it/s]100%|██████████| 8/8 [00:00<00:00, 17.32it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 27.07it/s] 75%|███████▌  | 6/8 [00:00<00:00, 27.29it/s]100%|██████████| 8/8 [00:00<00:00, 27.50it/s]
+ACC=0.046625, MRR=0.046625, MAP=0.046625, nDCG=0.046625
+epo:[85/100] itr:[456/1066] step_time:2s Loss=0.15335
+epo:[85/100] itr:[556/1066] step_time:1s Loss=0.15047
+epo:[85/100] itr:[656/1066] step_time:1s Loss=0.15909
+epo:[85/100] itr:[756/1066] step_time:1s Loss=0.15245
+epo:[85/100] itr:[856/1066] step_time:1s Loss=0.15647
+epo:[85/100] itr:[956/1066] step_time:1s Loss=0.15599
+epo:[85/100] itr:[1056/1066] step_time:1s Loss=0.15763
+epo:[86/100] itr:[90/1066] step_time:1s Loss=0.15455
+epo:[86/100] itr:[190/1066] step_time:1s Loss=0.15296
+epo:[86/100] itr:[290/1066] step_time:1s Loss=0.15429
+epo:[86/100] itr:[390/1066] step_time:1s Loss=0.15512
+epo:[86/100] itr:[490/1066] step_time:1s Loss=0.15255
+epo:[86/100] itr:[590/1066] step_time:1s Loss=0.15686
+epo:[86/100] itr:[690/1066] step_time:1s Loss=0.15540
+epo:[86/100] itr:[790/1066] step_time:1s Loss=0.15709
+epo:[86/100] itr:[890/1066] step_time:1s Loss=0.15197
+epo:[86/100] itr:[990/1066] step_time:1s Loss=0.15289
+epo:[87/100] itr:[24/1066] step_time:0s Loss=0.15510
+epo:[87/100] itr:[124/1066] step_time:1s Loss=0.15374
+epo:[87/100] itr:[224/1066] step_time:1s Loss=0.15080
+epo:[87/100] itr:[324/1066] step_time:1s Loss=0.15122
+epo:[87/100] itr:[424/1066] step_time:1s Loss=0.14930
+epo:[87/100] itr:[524/1066] step_time:1s Loss=0.15390
+epo:[87/100] itr:[624/1066] step_time:1s Loss=0.15782
+epo:[87/100] itr:[724/1066] step_time:1s Loss=0.15258
+epo:[87/100] itr:[824/1066] step_time:1s Loss=0.15674
+epo:[87/100] itr:[924/1066] step_time:0s Loss=0.15432
+epo:[87/100] itr:[1024/1066] step_time:1s Loss=0.15453
+epo:[88/100] itr:[58/1066] step_time:0s Loss=0.14782
+epo:[88/100] itr:[158/1066] step_time:1s Loss=0.14642
+epo:[88/100] itr:[258/1066] step_time:1s Loss=0.15263
+epo:[88/100] itr:[358/1066] step_time:1s Loss=0.15151
+epo:[88/100] itr:[458/1066] step_time:1s Loss=0.15447
+epo:[88/100] itr:[558/1066] step_time:1s Loss=0.15298
+epo:[88/100] itr:[658/1066] step_time:1s Loss=0.15044
+epo:[88/100] itr:[758/1066] step_time:1s Loss=0.15177
+epo:[88/100] itr:[858/1066] step_time:1s Loss=0.15355
+epo:[88/100] itr:[958/1066] step_time:1s Loss=0.15307
+epo:[88/100] itr:[1058/1066] step_time:1s Loss=0.15732
+epo:[89/100] itr:[92/1066] step_time:0s Loss=0.15680
+epo:[89/100] itr:[192/1066] step_time:1s Loss=0.15029
+epo:[89/100] itr:[292/1066] step_time:1s Loss=0.15238
+epo:[89/100] itr:[392/1066] step_time:1s Loss=0.14820
+epo:[89/100] itr:[492/1066] step_time:1s Loss=0.15296
+epo:[89/100] itr:[592/1066] step_time:1s Loss=0.15049
+epo:[89/100] itr:[692/1066] step_time:1s Loss=0.15457
+epo:[89/100] itr:[792/1066] step_time:1s Loss=0.15284
+epo:[89/100] itr:[892/1066] step_time:1s Loss=0.15487
+epo:[89/100] itr:[992/1066] step_time:1s Loss=0.15446
+epo:[90/100] itr:[26/1066] step_time:0s Loss=0.15900
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  5.97it/s] 50%|█████     | 4/8 [00:00<00:00,  7.63it/s] 75%|███████▌  | 6/8 [00:00<00:00,  9.35it/s]100%|██████████| 8/8 [00:00<00:00, 14.66it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 23.35it/s] 75%|███████▌  | 6/8 [00:00<00:00, 24.64it/s]100%|██████████| 8/8 [00:00<00:00, 26.21it/s]
+ACC=0.046625, MRR=0.046625, MAP=0.046625, nDCG=0.046625
+epo:[90/100] itr:[126/1066] step_time:2s Loss=0.15304
+epo:[90/100] itr:[226/1066] step_time:0s Loss=0.15195
+epo:[90/100] itr:[326/1066] step_time:1s Loss=0.15504
+epo:[90/100] itr:[426/1066] step_time:1s Loss=0.15113
+epo:[90/100] itr:[526/1066] step_time:1s Loss=0.15262
+epo:[90/100] itr:[626/1066] step_time:1s Loss=0.15129
+epo:[90/100] itr:[726/1066] step_time:1s Loss=0.15225
+epo:[90/100] itr:[826/1066] step_time:1s Loss=0.15122
+epo:[90/100] itr:[926/1066] step_time:1s Loss=0.15099
+epo:[90/100] itr:[1026/1066] step_time:1s Loss=0.15110
+epo:[91/100] itr:[60/1066] step_time:0s Loss=0.15675
+epo:[91/100] itr:[160/1066] step_time:1s Loss=0.15215
+epo:[91/100] itr:[260/1066] step_time:1s Loss=0.15674
+epo:[91/100] itr:[360/1066] step_time:1s Loss=0.15409
+epo:[91/100] itr:[460/1066] step_time:1s Loss=0.14942
+epo:[91/100] itr:[560/1066] step_time:1s Loss=0.14988
+epo:[91/100] itr:[660/1066] step_time:1s Loss=0.15838
+epo:[91/100] itr:[760/1066] step_time:1s Loss=0.15020
+epo:[91/100] itr:[860/1066] step_time:1s Loss=0.15052
+epo:[91/100] itr:[960/1066] step_time:1s Loss=0.15257
+epo:[91/100] itr:[1060/1066] step_time:1s Loss=0.15220
+epo:[92/100] itr:[94/1066] step_time:1s Loss=0.15003
+epo:[92/100] itr:[194/1066] step_time:1s Loss=0.15276
+epo:[92/100] itr:[294/1066] step_time:1s Loss=0.15087
+epo:[92/100] itr:[394/1066] step_time:1s Loss=0.15585
+epo:[92/100] itr:[494/1066] step_time:1s Loss=0.15386
+epo:[92/100] itr:[594/1066] step_time:1s Loss=0.15792
+epo:[92/100] itr:[694/1066] step_time:1s Loss=0.15250
+epo:[92/100] itr:[794/1066] step_time:1s Loss=0.15000
+epo:[92/100] itr:[894/1066] step_time:1s Loss=0.15344
+epo:[92/100] itr:[994/1066] step_time:1s Loss=0.15136
+epo:[93/100] itr:[28/1066] step_time:0s Loss=0.15113
+epo:[93/100] itr:[128/1066] step_time:1s Loss=0.15456
+epo:[93/100] itr:[228/1066] step_time:1s Loss=0.15174
+epo:[93/100] itr:[328/1066] step_time:1s Loss=0.14923
+epo:[93/100] itr:[428/1066] step_time:1s Loss=0.15293
+epo:[93/100] itr:[528/1066] step_time:1s Loss=0.15429
+epo:[93/100] itr:[628/1066] step_time:1s Loss=0.14964
+epo:[93/100] itr:[728/1066] step_time:1s Loss=0.15245
+epo:[93/100] itr:[828/1066] step_time:1s Loss=0.16005
+epo:[93/100] itr:[928/1066] step_time:1s Loss=0.15222
+epo:[93/100] itr:[1028/1066] step_time:1s Loss=0.15591
+epo:[94/100] itr:[62/1066] step_time:0s Loss=0.15207
+epo:[94/100] itr:[162/1066] step_time:1s Loss=0.15116
+epo:[94/100] itr:[262/1066] step_time:1s Loss=0.15131
+epo:[94/100] itr:[362/1066] step_time:1s Loss=0.14954
+epo:[94/100] itr:[462/1066] step_time:1s Loss=0.14877
+epo:[94/100] itr:[562/1066] step_time:1s Loss=0.14908
+epo:[94/100] itr:[662/1066] step_time:1s Loss=0.15449
+epo:[94/100] itr:[762/1066] step_time:1s Loss=0.14958
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.09it/s] 50%|█████     | 4/8 [00:00<00:00,  7.97it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.03it/s]100%|██████████| 8/8 [00:00<00:00, 16.25it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 27.46it/s] 75%|███████▌  | 6/8 [00:00<00:00, 27.73it/s]100%|██████████| 8/8 [00:00<00:00, 28.40it/s]
+ACC=0.046375, MRR=0.046375, MAP=0.046375, nDCG=0.046375
+epo:[94/100] itr:[862/1066] step_time:2s Loss=0.14857
+epo:[94/100] itr:[962/1066] step_time:1s Loss=0.15282
+epo:[94/100] itr:[1062/1066] step_time:1s Loss=0.15046
+epo:[95/100] itr:[96/1066] step_time:1s Loss=0.15157
+epo:[95/100] itr:[196/1066] step_time:1s Loss=0.15445
+epo:[95/100] itr:[296/1066] step_time:1s Loss=0.15227
+epo:[95/100] itr:[396/1066] step_time:1s Loss=0.15178
+epo:[95/100] itr:[496/1066] step_time:1s Loss=0.15630
+epo:[95/100] itr:[596/1066] step_time:1s Loss=0.14935
+epo:[95/100] itr:[696/1066] step_time:1s Loss=0.15118
+epo:[95/100] itr:[796/1066] step_time:1s Loss=0.15349
+epo:[95/100] itr:[896/1066] step_time:1s Loss=0.15308
+epo:[95/100] itr:[996/1066] step_time:1s Loss=0.15328
+epo:[96/100] itr:[30/1066] step_time:0s Loss=0.14967
+epo:[96/100] itr:[130/1066] step_time:1s Loss=0.14860
+epo:[96/100] itr:[230/1066] step_time:1s Loss=0.15417
+epo:[96/100] itr:[330/1066] step_time:1s Loss=0.15337
+epo:[96/100] itr:[430/1066] step_time:1s Loss=0.15045
+epo:[96/100] itr:[530/1066] step_time:1s Loss=0.15237
+epo:[96/100] itr:[630/1066] step_time:1s Loss=0.15513
+epo:[96/100] itr:[730/1066] step_time:1s Loss=0.15274
+epo:[96/100] itr:[830/1066] step_time:1s Loss=0.15357
+epo:[96/100] itr:[930/1066] step_time:1s Loss=0.15315
+epo:[96/100] itr:[1030/1066] step_time:1s Loss=0.15285
+epo:[97/100] itr:[64/1066] step_time:0s Loss=0.15237
+epo:[97/100] itr:[164/1066] step_time:1s Loss=0.14918
+epo:[97/100] itr:[264/1066] step_time:1s Loss=0.14807
+epo:[97/100] itr:[364/1066] step_time:1s Loss=0.15580
+epo:[97/100] itr:[464/1066] step_time:1s Loss=0.15416
+epo:[97/100] itr:[564/1066] step_time:1s Loss=0.15203
+epo:[97/100] itr:[664/1066] step_time:1s Loss=0.15027
+epo:[97/100] itr:[764/1066] step_time:1s Loss=0.15214
+epo:[97/100] itr:[864/1066] step_time:1s Loss=0.15606
+epo:[97/100] itr:[964/1066] step_time:1s Loss=0.15339
+epo:[97/100] itr:[1064/1066] step_time:1s Loss=0.15611
+epo:[98/100] itr:[98/1066] step_time:1s Loss=0.15302
+epo:[98/100] itr:[198/1066] step_time:1s Loss=0.15300
+epo:[98/100] itr:[298/1066] step_time:1s Loss=0.15458
+epo:[98/100] itr:[398/1066] step_time:1s Loss=0.15101
+epo:[98/100] itr:[498/1066] step_time:1s Loss=0.15142
+epo:[98/100] itr:[598/1066] step_time:1s Loss=0.15445
+epo:[98/100] itr:[698/1066] step_time:1s Loss=0.15046
+epo:[98/100] itr:[798/1066] step_time:1s Loss=0.15367
+epo:[98/100] itr:[898/1066] step_time:1s Loss=0.15574
+epo:[98/100] itr:[998/1066] step_time:1s Loss=0.14747
+epo:[99/100] itr:[32/1066] step_time:0s Loss=0.15113
+epo:[99/100] itr:[132/1066] step_time:1s Loss=0.15265
+epo:[99/100] itr:[232/1066] step_time:1s Loss=0.15383
+epo:[99/100] itr:[332/1066] step_time:1s Loss=0.15643
+epo:[99/100] itr:[432/1066] step_time:1s Loss=0.15456
+validating..
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.23it/s] 50%|█████     | 4/8 [00:00<00:00,  8.09it/s] 88%|████████▊ | 7/8 [00:00<00:00, 10.19it/s]100%|██████████| 8/8 [00:00<00:00, 16.18it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 38%|███▊      | 3/8 [00:00<00:00, 25.81it/s] 75%|███████▌  | 6/8 [00:00<00:00, 26.30it/s]100%|██████████| 8/8 [00:00<00:00, 27.07it/s]
+ACC=0.04625, MRR=0.04625, MAP=0.04625, nDCG=0.04625
+epo:[99/100] itr:[532/1066] step_time:2s Loss=0.15116
+epo:[99/100] itr:[632/1066] step_time:0s Loss=0.15891
+epo:[99/100] itr:[732/1066] step_time:1s Loss=0.15036
+epo:[99/100] itr:[832/1066] step_time:1s Loss=0.14970
+epo:[99/100] itr:[932/1066] step_time:1s Loss=0.14718
+epo:[99/100] itr:[1032/1066] step_time:1s Loss=0.15273
+epo:[100/100] itr:[66/1066] step_time:0s Loss=0.15014
+epo:[100/100] itr:[166/1066] step_time:1s Loss=0.15113
+epo:[100/100] itr:[266/1066] step_time:1s Loss=0.15140
+epo:[100/100] itr:[366/1066] step_time:1s Loss=0.15471
+epo:[100/100] itr:[466/1066] step_time:1s Loss=0.15259
+epo:[100/100] itr:[566/1066] step_time:1s Loss=0.15139
+epo:[100/100] itr:[666/1066] step_time:1s Loss=0.15476
+epo:[100/100] itr:[766/1066] step_time:1s Loss=0.15437
+epo:[100/100] itr:[866/1066] step_time:1s Loss=0.15318
+epo:[100/100] itr:[966/1066] step_time:1s Loss=0.15247

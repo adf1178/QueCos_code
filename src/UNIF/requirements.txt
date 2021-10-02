@@ -1,0 +1,8 @@
+torch
+torchvision
+tables
+numpy
+scipy
+tqdm
+tensorboardX
+transformers
